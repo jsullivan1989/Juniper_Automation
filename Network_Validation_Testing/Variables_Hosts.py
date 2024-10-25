@@ -39,7 +39,7 @@ Host02 = {
     'username': '<username>',
     'password': passwd,
     'port': 22,
-    'session_log': '/path/<logging_file_name>
+    'session_log': '/path/<logging_file_name>'
 }
 
 # ...insert more hosts as needed
