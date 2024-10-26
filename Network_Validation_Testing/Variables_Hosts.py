@@ -5,6 +5,16 @@ Modify as needed to fit your environment. '''
 
 import getpass
 
+# You will be prompted to name your LogDirectory and LogFile variables when importing this file in the different Network Validation Scripts
+# These variables will be passed to session_log in order to log the commands during failover testing
+# A separate logfile is made for each router
+
+LogDirectory = input('Enter the name of the directory where you would like to log the data for this test: ')
+R01_LogFile = input('Enter the name of the log file for Router 1: ')
+R02_LogFile = input('Enter the name of the log file for Router 2: ')
+
+
+
 passwd = getpass.getpass('Please enter your SSH password for your account: ')
 Router_01 = '<Router #1 IP Address>'
 Router_02 = '<Router #2 IP Address>'
@@ -30,7 +40,7 @@ Host01 = {
     'username': '<username>',
     'password': passwd,
     'port': 22,
-    'session_log': '/path/<logging_file_name>'
+    'session_log': LogDirectory + '/' + R01_LogFile
     }
 
 Host02 = {
@@ -39,7 +49,7 @@ Host02 = {
     'username': '<username>',
     'password': passwd,
     'port': 22,
-    'session_log': '/path/<logging_file_name>'
+    'session_log': LogDirectory + '/' + R02_LogFile
 }
 
 # ...insert more hosts as needed
