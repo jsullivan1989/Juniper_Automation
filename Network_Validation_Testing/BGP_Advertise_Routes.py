@@ -18,7 +18,11 @@ from Variables_Hosts import *
 The route policy advertisement for this test was a simple one as an example in which only directly connected IRBs are being advertised.  Modification
 would be necessary for different route policy requirements based on environment.'''
 
+# Create log file and directories.  You will be prompted upon code execution.  Below is for MacOS operating system
 
+os.system("mkdir " + LogDirectory)
+os.system("touch " + LogDirectory + "/" + R01_LogFile)
+os.system("touch " + LogDirectory + "/" + R02_LogFile)
 
 
 def BGP_Route_Advertisement()
