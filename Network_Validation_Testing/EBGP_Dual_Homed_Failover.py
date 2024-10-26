@@ -23,6 +23,11 @@ connection from the CPE side via the "deactivate" command one router at a time. 
 
 from Variables_Hosts import *
 
+# Create log file and directories.  You will be prompted upon code execution.  Below is for MacOS operating system
+
+os.system("mkdir " + LogDirectory)
+os.system("touch " + LogDirectory + "/" + R01_LogFile)
+os.system("touch " + LogDirectory + "/" + R02_LogFile)
 
 def BGP_Failover_Testing():
     try:
